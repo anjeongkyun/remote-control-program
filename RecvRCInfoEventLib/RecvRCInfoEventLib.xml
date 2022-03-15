@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RecvRCInfoEventLib</name>
+    </assembly>
+    <members>
+        <member name="T:MyDemoLib.RecvRCInfoEventHandler">
+            <summary>
+            원격 제어 요청 수신 이벤트를 정의하기 위한 대리자
+            </summary>
+            <param name="sender">이벤트 통보 개체</param>
+            <param name="e">이벤트 처리 인자</param>
+        </member>
+        <member name="T:MyDemoLib.RecvRCInfoEventArgs">
+            <summary>
+            원격 제어 요청 수신 이벤트 인자 클래스
+            </summary>
+        </member>
+        <member name="P:MyDemoLib.RecvRCInfoEventArgs.iPEndPoint">
+            <summary>
+            IP 단말 정보 - 가져오기
+            </summary>
+        </member>
+        <member name="P:MyDemoLib.RecvRCInfoEventArgs.IPAddressStr">
+            <summary>
+            IP 주소 문자열 - 가져오기
+            </summary>
+        </member>
+        <member name="P:MyDemoLib.RecvRCInfoEventArgs.Port">
+            <summary>
+            포트 - 가져오기
+            </summary>
+        </member>
+        <member name="M:MyDemoLib.RecvRCInfoEventArgs.#ctor(System.Net.EndPoint)">
+            <summary>
+            생성자
+            </summary>
+            <param name="RemoteEndPoint">상대측 단말 정보</param>
+        </member>
+    </members>
+</doc>

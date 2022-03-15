@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <RootNamespace>이미지_수신_서버</RootNamespace>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ImgSendRecLib\ImgSendRecLib.csproj" />
+    <ProjectReference Include="..\KMESendRecvLib\KMESendRecvLib.csproj" />
+  </ItemGroup>
+
+</Project>
