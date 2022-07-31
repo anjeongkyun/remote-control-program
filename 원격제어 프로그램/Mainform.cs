@@ -15,8 +15,8 @@ namespace 원격제어_프로그램
     public partial class Mainform : Form
     {
 
-        string server_ip;
-        int server_port;
+        string serverIp;
+        int serverPort;
         RemoteClientForm rcf = null;
         VirtualCursorForm vcf = null;
 
@@ -45,8 +45,8 @@ namespace 원격제어_프로그램
             else
             {
                 tbox_controller_ip.Text = e.IPAddressStr;
-                server_ip = e.IPAddressStr;
-                server_port = e.Port;
+                serverIp = e.IPAddressStr;
+                serverPort = e.Port;
                 btn_ok.Enabled = true;
             }
         }
@@ -101,7 +101,7 @@ namespace 원격제어_프로그램
             try
             {
                 ImageClient ic = new ImageClient();
-                ic.Connect(server_ip, NetworkInfo.ImgPort);
+                ic.Connect(serverIp, NetworkInfo.ImgPort);
                 ic.SendImageAsync(bitmap, null);
             }
             catch(Exception ex)

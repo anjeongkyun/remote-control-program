@@ -26,7 +26,7 @@ namespace 원격제어_프로그램
     public static class WrapNative
     {
         [DllImport("user32.dll")]
-        static extern void keydb_event(byte vk, byte scan, int flags, int extra);
+        static extern void keybd_event(byte vk, byte scan, int flags, int extra);
 
         [DllImport("user32.dll")]
         static extern void mouse_event(byte vk, int dx, int dy, int buttons, int extra);
@@ -39,12 +39,12 @@ namespace 원격제어_프로그램
 
         public static void KeyDown(int keycode)
         {
-            keydb_event((byte)keycode, 0, (int)KeyFlag.KE_DOWN, 0);
+            keybd_event((byte)keycode, 0, (int)KeyFlag.KE_DOWN, 0);
         }
 
         public static void KeyUp(int keycode)
         {
-            keydb_event((byte)keycode, 0, (int)KeyFlag.KE_UP, 0);
+            keybd_event((byte)keycode, 0, (int)KeyFlag.KE_UP, 0);
         }
 
         public static void Move(int x, int y)
