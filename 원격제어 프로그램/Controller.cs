@@ -9,7 +9,7 @@ namespace 원격제어_프로그램
     class Controller
     {
 
-        ImageServer img_server = null;
+        ImageServer imgServer = null;
         SendEventClient sce = null;
         public event RecvImageEventHandler RecvedImage = null;
         string host_ip;
@@ -57,13 +57,13 @@ namespace 원격제어_프로그램
         public void Start(string host_ip)
         {
             this.host_ip = host_ip;
-            img_server = new ImageServer(MyIP, NetworkInfo.ImgPort);
-            img_server.RecvedImage += img_server_RecvedImage;
+            imgServer = new ImageServer(MyIP, NetworkInfo.ImgPort);
+            imgServer.RecvedImage += imgServer_RecvedImage;
             SetupClient.Setup(host_ip, NetworkInfo.SetupPort);
 
         }
 
-        private void img_server_RecvedImage(object sender, RecvImageEventArgs e)
+        private void imgServer_RecvedImage(object sender, RecvImageEventArgs e)
         {
             if (RecvedImage != null)
             {
@@ -73,10 +73,10 @@ namespace 원격제어_프로그램
 
         public void Stop()
         {
-            if(img_server != null)
+            if(imgServer != null)
             {
-                img_server.Close();
-                img_server = null;
+                imgServer.Close();
+                imgServer = null;
             }
         }
 

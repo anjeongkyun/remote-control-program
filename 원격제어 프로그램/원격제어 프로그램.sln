@@ -9,6 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecvRCInfoEventLib", "..\Re
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImgSendRecLib", "..\ImgSendRecLib\ImgSendRecLib.csproj", "{1E22AF68-D15F-4D15-B128-4073B22D6283}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "이미지 수신 서버", "..\이미지 수신 서버\이미지 수신 서버.csproj", "{4898E52A-A2FF-4FBB-8008-83AAC6CC65FB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "이미지 캡쳐 및 전송 클라이언트", "..\이미지 캡쳐 및 전송 클라이언트\이미지 캡쳐 및 전송 클라이언트.csproj", "{B6C80473-5F16-468E-AE76-3B95D7F620D2}"
+EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KMESendRecvLib", "..\KMESendRecvLib\KMESendRecvLib.csproj", "{DAFAFBFE-E09A-4822-B360-350106B93429}"
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "..\Setup\Setup.vdproj", "{A0B8688D-C4FA-4E84-82D8-825E2AAC91B5}"
@@ -31,6 +35,14 @@ Global
 		{1E22AF68-D15F-4D15-B128-4073B22D6283}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E22AF68-D15F-4D15-B128-4073B22D6283}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E22AF68-D15F-4D15-B128-4073B22D6283}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4898E52A-A2FF-4FBB-8008-83AAC6CC65FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4898E52A-A2FF-4FBB-8008-83AAC6CC65FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4898E52A-A2FF-4FBB-8008-83AAC6CC65FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4898E52A-A2FF-4FBB-8008-83AAC6CC65FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6C80473-5F16-468E-AE76-3B95D7F620D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6C80473-5F16-468E-AE76-3B95D7F620D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6C80473-5F16-468E-AE76-3B95D7F620D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6C80473-5F16-468E-AE76-3B95D7F620D2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DAFAFBFE-E09A-4822-B360-350106B93429}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DAFAFBFE-E09A-4822-B360-350106B93429}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DAFAFBFE-E09A-4822-B360-350106B93429}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -35,9 +35,9 @@ namespace 원격제어_프로그램
         {
             get
             {
-                string host_name = Dns.GetHostName();
-                IPHostEntry host_entry = Dns.GetHostEntry(host_name);
-                foreach (IPAddress ipaddr in host_entry.AddressList)
+                string hostName = Dns.GetHostName();
+                IPHostEntry hostEntry = Dns.GetHostEntry(hostName);
+                foreach (IPAddress ipaddr in hostEntry.AddressList)
                 {
                     if(ipaddr.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
                     {

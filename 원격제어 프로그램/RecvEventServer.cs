@@ -14,30 +14,30 @@ namespace 원격제어_프로그램
 
     class RecvEventServer
     {
-        Socket lis_sock;
+        Socket lisSock;
         public event RecvKMEEventHandler RecvedKMEvent = null;
 
         public RecvEventServer(String ip, int port)
         {
-            lis_sock = new Socket(AddressFamily.InterNetwork,
+            lisSock = new Socket(AddressFamily.InterNetwork,
                 SocketType.Stream, ProtocolType.Tcp);
 
             IPAddress ipaddr = IPAddress.Parse(ip);
             IPEndPoint ep = new IPEndPoint(ipaddr, port);
 
-            lis_sock.Bind(ep);
-            lis_sock.Listen(5);
-            lis_sock.BeginAccept(DoAccept, null);
+            lisSock.Bind(ep);
+            lisSock.Listen(5);
+            lisSock.BeginAccept(DoAccept, null);
         }
 
         private void DoAccept(IAsyncResult result)
         {
-            if(lis_sock != null)
+            if(lisSock != null)
             {
-                Socket dosock = lis_sock.EndAccept(result);
+                Socket dosock = lisSock.EndAccept(result);
 
                 //또 다른 클라이언트가 요청할 수 있기에 다시 BeginAccept
-                lis_sock.BeginAccept(DoAccept,null);
+                lisSock.BeginAccept(DoAccept,null);
                 Receive(dosock);
             }
         }
@@ -57,10 +57,10 @@ namespace 원격제어_프로그램
 
         public void Close()
         {
-            if(lis_sock != null)
+            if(lisSock != null)
             {
-                lis_sock.Close();
-                lis_sock = null;
+                lisSock.Close();
+                lisSock = null;
             }
         }
     }

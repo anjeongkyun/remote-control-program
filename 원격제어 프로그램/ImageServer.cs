@@ -12,32 +12,32 @@ namespace 원격제어_프로그램
 {
     public class ImageServer
     {
-        Socket lis_sock = null;
+        Socket lisSock = null;
         public event RecvImageEventHandler RecvedImage = null;
 
         public ImageServer(string ip, int port)
         {
-            lis_sock = new Socket(AddressFamily.InterNetwork,SocketType.Stream, ProtocolType.Tcp);
+            lisSock = new Socket(AddressFamily.InterNetwork,SocketType.Stream, ProtocolType.Tcp);
             IPAddress ipaddr = IPAddress.Parse(ip);
             IPEndPoint ep = new IPEndPoint(ipaddr, port);
-            lis_sock.Bind(ep);
-            lis_sock.Listen(5);
-            lis_sock.BeginAccept(DoAccept, null);
+            lisSock.Bind(ep);
+            lisSock.Listen(5);
+            lisSock.BeginAccept(DoAccept, null);
 
 
         }
 
         private void DoAccept(IAsyncResult result)
         {
-            if(lis_sock == null)
+            if(lisSock == null)
                 return;
 
             try
             {
-                Socket dosock = lis_sock.EndAccept(result);
+                Socket dosock = lisSock.EndAccept(result);
                 Receive(dosock);
                 //다시 클라이언트 접속할 수 있으니 BeginAccept
-                lis_sock.BeginAccept(DoAccept, null);
+                lisSock.BeginAccept(DoAccept, null);
             }
             catch
             {
@@ -47,10 +47,10 @@ namespace 원격제어_프로그램
 
         public  void Close()
         {
-            if(lis_sock == null)
+            if(lisSock == null)
             {
-                lis_sock.Close();
-                lis_sock = null;
+                lisSock.Close();
+                lisSock = null;
             }
         }
 

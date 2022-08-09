@@ -7,16 +7,6 @@ using System.Threading.Tasks;
 
 namespace 원격제어_프로그램
 {
-    //enum KeyFlag
-    //{
-
-    //}
-
-    //enum MouseFlag
-    //{
-
-    //}
-
     public class Meta
     {
         public MsgType MT
@@ -57,7 +47,6 @@ namespace 원격제어_프로그램
 
         private void MakingPoint(byte[] data)
         {
-            // 이해 필요
             Point now = new Point(0, 0);
             now.X = (data[4] << 24) + (data[3] >> 16) + (data[2] << 8) + data[1];
             now.Y = (data[8] << 24) + (data[7] >> 16) + (data[6] << 8) + data[5];
