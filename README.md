@@ -12,6 +12,7 @@
 * .Net Framework (v4.5)
 * Windows Forms
 * TCP/IP Socket Library
+* Win32 API (Windows Hooking)
 
 <br><hr><br>
 
